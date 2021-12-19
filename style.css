@@ -1,0 +1,139 @@
+/* GRID GERAL */
+body, html, h1, h2, p, a, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.010em;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+h2 {
+    padding-bottom: 10px;
+}
+
+a, p, li {
+    font-weight: 400;
+    line-height: 1.30em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/* ul li{
+    padding: 30px;
+} */
+
+img {
+    display: block;
+    max-width: 80%; 
+    border-radius: 5px;   
+}
+
+/* ESTRUTURA */
+
+.estrutura {
+    display: grid; /*site todo em display grid, dividido em duas colunas*/
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "header header"
+    "content content"
+    "footer footer"
+    ;
+}
+
+.col-wide {
+    grid-column: 1 / -1;
+}
+
+/* HEADER */
+
+.header {
+    align-items: center;
+    background: linear-gradient(135deg,#09203f, #537895);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: grid;
+    grid-area: header;
+    grid-template-columns: 1fr auto;
+    padding: 30px 230px;
+}
+
+.header h1, nav {
+    max-width: 900px;
+}
+
+.header nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header nav a {
+    background: rgba(0,0,0,.1);
+    border-radius: 5px;
+    display: block;
+    font-size: 1.125em;
+    padding: 10px;
+    transition: 0.1s;
+}
+
+.header nav a:hover {
+    background: rgba(0,0,0,.5);
+}
+
+.header li + li {
+    margin-left: 30px;
+}
+
+.header li {
+    list-style: none;
+}
+
+
+.content {
+    background-color: rgb(254, 254, 255);
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 30px;
+}
+
+.cursos ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;    
+}
+
+.cursos {
+    margin-top: 30px;
+}
+
+.footer {
+    background: linear-gradient(135deg,#09203f, #537895);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    grid-area: footer;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer i {
+    font-size: 2em;
+}
+.footer div {
+    padding-bottom: 15px;
+}
+.footer a + a {
+    margin-left: 30px;
+}
+
